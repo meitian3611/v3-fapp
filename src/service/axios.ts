@@ -2,8 +2,7 @@ import axios, { AxiosRequestConfig } from 'axios'
 import { ElMessage } from 'element-plus'
 
 // 设置请求头和请求路径
-// axios.defaults.baseURL = '/fapp'
-axios.defaults.baseURL = '/'
+axios.defaults.baseURL = '/api'
 axios.defaults.timeout = 0
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
 axios.interceptors.request.use(

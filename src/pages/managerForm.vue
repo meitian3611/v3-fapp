@@ -4,9 +4,9 @@ import request from '@/service/api/manageForm/index'
 import querySwitch from '@/components/querySwitch.vue'
 
 onMounted(() => {
-  // request.menuListTest().then((res) => {
-  //   console.log(res)
-  // })
+  request.menuListTest().then((res) => {
+    console.log(res)
+  })
 })
 
 let queryShow = ref(true) // true:展开/false:收起
