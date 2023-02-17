@@ -5,7 +5,7 @@ const routes: RouteRecordRaw[] = [
         path: '/managerForm',
         alias: "/",
         name: 'managerForm',
-        component: () => import('@/pages/managerForm.vue'),
+        component: () => import('@/pages/managerForm/index.vue'),
     },
 ]
 
