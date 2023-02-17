@@ -1,6 +1,6 @@
 # v3-fapp
 
-This template should help get you started developing with Vue 3 in Vite.
+ - 此项目原先是 vue2版本，现在使用vue3 + Ts的语法将其重构一遍，熟悉巩固Vue3的代码写法
 
 ## Recommended IDE Setup
 

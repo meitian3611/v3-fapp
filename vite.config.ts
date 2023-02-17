@@ -62,10 +62,10 @@ export default (mode: string) => {
       port: 1013,
       strictPort: false, //设为true时端口被占用则直接退出，不会尝试下一个可用端口
       proxy: {
-        '/api': {
+        '/fapp': {
           target: env.VITE_BASIC_URL, //代理接口
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ''),
+          // rewrite: (path) => path.replace(/^\/fapp/, ''),
         },
 
         // 字符串简写写法

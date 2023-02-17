@@ -8,7 +8,7 @@ const getManageList: T.IManageListApi = {
         return axios.get('/account/manager/page', params)
     },
     menuListTest(){
-        return axios.get('/Menus/GetMenus')
+        return axios.get('/account/common/data-perm')
     }
 }
 
