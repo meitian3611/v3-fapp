@@ -6,9 +6,6 @@ const getManageList: T.IManageListApi = {
     // 科目管理表单分页列表
     getList(params) {
         return axios.get('/account/manager/page', params)
-    },
-    menuListTest(){
-        return axios.get('/account/common/data-perm')
     }
 }
 

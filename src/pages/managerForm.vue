@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue'
 import request from '@/service/api/manageForm/index'
-import querySwitch from '@/components/querySwitch.vue'
+import QuerySwitch from '@/components/QuerySwitch.vue'
 
-onMounted(() => {
-  request.menuListTest().then((res) => {
-    console.log(res)
-  })
-})
+onMounted(() => {})
 
 let queryShow = ref(true) // true:展开/false:收起
 </script>
@@ -21,7 +17,7 @@ let queryShow = ref(true) // true:展开/false:收起
           <span class="text">查询条件</span>
         </div>
         <div class="showBtn">
-          <querySwitch v-model:queryShow="queryShow"></querySwitch>
+          <query-switch v-model:queryShow="queryShow"></query-switch>
         </div>
       </div>
       <div class="querySearch"></div>

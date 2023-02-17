@@ -22,6 +22,9 @@ export default (mode: string) => {
         resolvers: [ElementPlusResolver()],
       }),
       Components({
+        dirs: ['src/components'], // 指定组件所在文件夹的位置，默认是src/components
+        extensions: ['vue'], //文件扩展
+        dts: 'src/components.d.ts', // 配置type文件生成位置
         resolvers: [ElementPlusResolver()],
       }),
       // gzip压缩 生产环境生成 .gz 文件

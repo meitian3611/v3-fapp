@@ -7,5 +7,4 @@ export interface IGetListParams {
 }
 export interface IManageListApi {
     getList: (params: IGetListParams) => Promise<any>
-    menuListTest: () => Promise<any>
 }
