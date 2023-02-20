@@ -1,5 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv, } from 'vite'
+import { viteMockServe } from 'vite-plugin-mock'
+import viteCompression from 'vite-plugin-compression'
 import vue from '@vitejs/plugin-vue'
 
 // 自动按需引入 elementUI 组件库
@@ -10,13 +12,17 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
 
 // https://vitejs.dev/config/
-export default (mode: string) => {
+export default (mode: string,) => {
   const env = loadEnv(mode, '');
 
   return defineConfig({
     base: './', //打包路径
     plugins: [
       vue(),
+      viteMockServe({
+        mockPath: 'mock',
+        localEnabled: true,
+      }),
       ElementPlus(),
       AutoImport({
         resolvers: [ElementPlusResolver()],
@@ -28,13 +34,13 @@ export default (mode: string) => {
         resolvers: [ElementPlusResolver()],
       }),
       // gzip压缩 生产环境生成 .gz 文件
-      // viteCompression({
-      //   verbose: true,
-      //   disable: false,
-      //   threshold: 10240,
-      //   algorithm: 'gzip',
-      //   ext: '.gz',
-      // }),
+      viteCompression({
+        verbose: true,
+        disable: false,
+        threshold: 10240,
+        algorithm: 'gzip',
+        ext: '.gz',
+      }),
     ],
     // 配置别名
     resolve: {
