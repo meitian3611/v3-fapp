@@ -6,6 +6,10 @@ const getCommonApi: T.ICommonApi = {
     // 数据及人员权限
     getPermList() {
         return axios.get('/account/common/data-perm')
+    },
+    // 科目列表
+    getSelectAccount(params) {
+        return axios.get('/account/pl-select/account', params)
     }
 }
 

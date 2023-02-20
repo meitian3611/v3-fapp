@@ -48,7 +48,7 @@ export default (mode: string) => {
       preprocessorOptions: {
         scss: {
           // additionalData: `$injectedColor:orange;`,
-          additionalData: '@import "@/assets/global.scss";',
+          // additionalData: '@import "@/assets/global.scss";',
         },
       },
     },

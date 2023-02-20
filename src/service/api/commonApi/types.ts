@@ -1,7 +1,8 @@
 // 此文件定义接口类型，接口约束
-export interface ICommonParams {
-    // [propName: string]: any
+export interface IAccountParams {
+    accountName: string
 }
 export interface ICommonApi {
-    getPermList: (params: ICommonParams) => Promise<any>
+    getPermList: () => Promise<any>
+    getSelectAccount: (params: IAccountParams) => Promise<any>
 }
