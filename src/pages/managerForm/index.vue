@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue'
-import request from '@/service/api/manageForm/index'
+import request from '@/service/api/managerForm/index'
 import SubjectQuery from '@/components/SubjectQuery.vue'
 onMounted(() => {})
 

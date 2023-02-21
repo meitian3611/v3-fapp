@@ -37,18 +37,20 @@ const handleReset = () => {}
       <QuerySwitch v-model:queryShow="queryShow" @change="switchChange"></QuerySwitch>
     </div>
   </div>
-  <div class="formQuery_body" v-show="queryShow">
-    <div class="queryInput">
-      <div class="listCon">
-        <div class="label">科目</div>
-        <div class="query">
-          <AccountInput v-model:accValue="query.subjectValue"></AccountInput>
+  <transition name="el-fade-in-linear">
+    <div class="formQuery_body" v-show="queryShow">
+      <div class="queryInput">
+        <div class="listCon">
+          <div class="label">科目</div>
+          <div class="query">
+            <AccountInput v-model:accValue="query.subjectValue"></AccountInput>
+          </div>
         </div>
       </div>
+      <div class="queryBtn">
+        <el-button @click="emits('handleSearch')" type="primary">查询</el-button>
+        <el-button @click="handleReset">重置</el-button>
+      </div>
     </div>
-    <div class="queryBtn">
-      <el-button size="small" @click="emits('handleSearch')" type="primary">查询</el-button>
-      <el-button size="small" @click="handleReset">重置</el-button>
-    </div>
-  </div>
+  </transition>
 </template>
