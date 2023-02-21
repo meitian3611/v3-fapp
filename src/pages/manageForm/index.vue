@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue'
-import request from '@/service/api/managerForm/index'
+import request from '@/service/api/manageForm/index'
 import SubjectQuery from '@/components/SubjectQuery.vue'
+import { IQueryInfo } from '@/types/index'
+
 onMounted(() => {})
 
-let query = reactive({
+let query = ref<IQueryInfo>({
   subjectValue: '',
   addSubject: 'ALL',
   subjectOwner: '',
@@ -14,7 +16,6 @@ let query = reactive({
 let newCount = ref(0)
 
 //
-let queryRef = ref()
 const handleSearch = () => {}
 </script>
 
