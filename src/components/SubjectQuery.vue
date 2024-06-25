@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import QuerySwitch from '@/components/QuerySwitch.vue'
 import AccountInput from '@/components/AccountInput.vue'
+import AccountOwner from '@/components/AccountOwner.vue'
 import { ref, reactive, onMounted, toRefs } from 'vue'
 import { IQueryInfo } from '@/types/index'
 
@@ -80,6 +81,12 @@ const handleReset = () => {
               >
               </el-option>
             </el-select>
+          </div>
+        </div>
+        <div class="listCon">
+          <div class="label">科目Owner</div>
+          <div class="query">
+            <AccountOwner v-model:accValue="query.subjectOwner"></AccountOwner>
           </div>
         </div>
       </div>

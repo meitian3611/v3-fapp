@@ -16,9 +16,9 @@ axios.interceptors.request.use(
 
 // 响应拦截 对异常信息做弹窗展示之类
 axios.interceptors.response.use((res) => {
-    if (res.data.code != 200) {
-        ElMessage.warning(res.data.msg)
-    }
+    // if (res.data.code != 200) {
+    //     ElMessage.warning(res.data.msg)
+    // }
     return res
 }, (error) => {
     ElMessage.error(error)

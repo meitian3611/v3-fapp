@@ -10,7 +10,11 @@ const getCommonApi: T.ICommonApi = {
     // 科目列表
     getSelectAccount(params) {
         return axios.get('/account/pl-select/account', params)
-    }
+    },
+    // 用户信息
+    getUsersInfo(params) {
+        return axios.get('/userInfo/getUsersByName', params)
+    },
 }
 
 export default getCommonApi
